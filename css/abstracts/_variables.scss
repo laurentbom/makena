@@ -1,0 +1,16 @@
+$couleur-primaire: #293a77;
+$couleur-secondaire: #a72c2a;
+$couleur-tertiaire: #fff;
+
+// Animation
+@keyframes square {
+  0% {
+    transform: translate(0%,-200%);
+  }
+  50% {
+    transform: translate(0%,0%);
+  }
+  100% {
+    transform: translate(0%,0%);
+  }
+}

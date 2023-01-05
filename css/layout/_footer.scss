@@ -1,0 +1,171 @@
+
+// Global
+footer{
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+// Footer 1
+.footer1{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 70vh;
+  @media screen and (min-width:700px){
+    margin-bottom: 30vh;
+  }
+  // Footer 1 Partie Gauche Logo
+  .footer1-logo{
+    background-color: #fff;
+    display: none;
+    @media screen and (min-width:700px){
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      //!Changement Taille Partie gauche
+      // width: 45%;
+      min-width: 30%;
+      
+    }
+  }
+}
+
+// Footer 1 Partie Droite
+.footer1-content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $couleur-primaire;
+  padding-left: 80px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  // Mise en forme
+  a{
+    color: $couleur-tertiaire;
+    text-decoration: none;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #ffffff;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    &:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+  h4{
+    color: $couleur-tertiaire;
+    font-size: 22px;
+    font-weight: 300;
+    margin-top: 0;
+  }
+  .footer-double-col{
+    display: flex;
+    column-gap: 100px;
+  }
+  small{
+    font-size: 11px;
+    opacity: 0.5;
+    margin: 80px 0 40px
+  }
+  .footer-col2{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    @media screen and (min-width:700px){
+      font-size: 16px;
+    }
+  }
+  .footer-col3{
+    display: flex;
+    flex-direction: column;
+    font-size: 11px;
+  }
+  img{
+    color: white;
+    opacity: 0.5;
+    width: 150px;
+  }
+  @media screen and (min-width:700px){
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 100px;
+  }
+}
+
+// Partie Contact avec liens
+.contactus{
+  margin-bottom: 50px;
+  div{
+    margin-bottom: 10px;
+  }
+  a {
+    position: relative;
+    font-size: 13px;
+    @media screen and (min-width:700px){
+      font-size: 16px;
+    }
+  }
+  span{
+    margin-right: 15px;
+  }
+}
+// Placement pour le desktop
+.footer1-haut{
+  @media screen and (min-width:700px){
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+// Partie avc le small et le logo
+.footer1-bas{
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  width: 100%;
+  @media screen and (min-width:700px){
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    small{
+      margin: 0;
+    }
+  }
+}
+
+// Footer 2
+.footer2{
+  background-color: darken($couleur-primaire, 10%);
+  padding: 100px;
+  min-height: 30vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  span{
+    text-transform: uppercase;
+    opacity: 0.5;
+    font-size: 14px;
+  }
+  p{
+    opacity: 0.5;
+    line-height: 25px;
+    font-size: 13px;
+  }
+}
